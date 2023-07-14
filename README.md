@@ -1,6 +1,6 @@
 # ML_Fake_Image_Detection
 
-Feature extraction of "real" and "fake" images and implementation of the best classification method (with different machine learning models like Random Forest, SVM, and Logitic Regression) to find which images are fake.
+Feature extraction of "[real](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/real)" and "[fake](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/fake)" images and implementation of the best classification method (with different machine learning models like Random Forest, SVM, and Logitic Regression) to find which images are fake.
 The imagset is contained of real and fake images for sea, mountain and jungle. A few samples are presented below.
 | Real Image | Fake Image |
 | --- | --- |
