@@ -74,5 +74,5 @@ Lables Summary:
 <div style="display: flex;">
     <img src="/readme_images/preprocessing1.jpg">
     <img src="/readme_images/preprocessing2.jpg">
-    <img src="/readme_images/preprocessing3.jpg">
+    <img src="/readme_images/preprocessing3.png">
 </div>
