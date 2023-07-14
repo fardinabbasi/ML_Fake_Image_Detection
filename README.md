@@ -162,3 +162,8 @@ The clustering results for different number of clusters are shown as below:
 | 6 | <img src="/readme_images/Clustering3.png"> | <img src="/readme_images/C3.png"> |
 | 9 | <img src="/readme_images/Clustering4.png"> | <img src="/readme_images/C4.png"> |
 | 50 | <img src="/readme_images/Clustering5.png"> | <img src="/readme_images/C5.png"> |
+
+The best number of clusters, is **elbow point** in the plot of **inertia** with respect to number of clusters:
+| Deep Features | Handcrafted Features |
+| --- | --- |
+| <img src="/readme_images/C6.png"> | <img src="/readme_images/Clustering6.png"> |
