@@ -137,7 +137,14 @@ $$
 Two importent **hyperparameters** to find in random forest method, are the **number of estimators** and the **maximum depth**. The Best Hyperparameters for **deep features** are found by **Randomized Search CV**:
 
 **Best Hyperparameters: {'n_estimators': 85, 'max_depth': 100}**
+
 The classification report and the confusion matrix are shown as below which demonstrate how well the model works with deep features:
 | Classification Report | Confusion Matrix |
 | --- | --- |
 | <img src="/readme_images/RF1.png"> | <img src="/readme_images/RF2.png"> |
+
+Also the first tree is shown as below:
+
+<img src="/readme_images/RF3.png">
+
+## Clustering
