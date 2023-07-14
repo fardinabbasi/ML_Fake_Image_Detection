@@ -88,7 +88,7 @@ able to prove that when the data are sampled from a Gaussian, LOL finds a better
 low-dimensional representation than PCA, LDA, CCA, and other linear methods
 
 **Principal Component Analysis (PCA)**:
-**PCA** is a widely used technique for dimension reduction. It identifies a new set of variables, called principal components, that are linear combinations of the original features.
+PCA is a widely used technique for dimension reduction. It identifies a new set of variables, called principal components, that are linear combinations of the original features.
 These components are ordered in terms of the amount of variance they explain in the
 data. 
 
