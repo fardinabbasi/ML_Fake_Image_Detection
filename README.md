@@ -1,7 +1,9 @@
 # ML_Fake_Image_Detection
 
-Feature extraction of "[real](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/real)" and "[fake](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/fake)" images and implementation of the best classification method (with different machine learning models like Random Forest, SVM, and Logitic Regression) to find which images are fake.
-The imagset is contained of real and fake images for sea, mountain and jungle. A few samples are presented below.
+Feature extraction of '[real](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/real)' and '[fake](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/fake)' images and implementation of the best classification method (using various machine learning models such as Random Forest, SVM, and Logistic Regression) to identify fake images. The dataset comprises approximately 3400 images, including both real and fake images of seas, mountains, and jungles, distributed evenly. A few sample images are provided below
+
+
+
 | Real Image | Fake Image |
 | --- | --- |
 | <img src="/real/810199456_real_none_sea_4.jpg" width="400" height="400"> | <img src="/fake/810199456_fake_stable_sea_2.jpg" width="400" height="400"> |
