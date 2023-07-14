@@ -1,2 +1,3 @@
 # ML_Fake_Image_Detection
-Machine Learning Course [ECE 501] - Spring 2023 - University of Tehran - Dr. A. Dehaqani, Dr. Tavassolipour
+
+Feature extraction of "real" and "fake" images and implementation of the best classification method (with different machine learning models like Random Forest, SVM, and Logitic Regression) to find which images are fake.
