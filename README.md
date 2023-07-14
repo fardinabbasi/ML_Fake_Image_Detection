@@ -97,7 +97,7 @@ PCA result for reducing **deep features** into 3 dimensions are shown below:
 <img src="/readme_images/pca.jpg">
 
 ## Classification
-For classification, 3 classification models are implemented. **Logistic Regression**, **SVM**, and **Random Forest**.
+For classification, 3 classification models are implemented including **Logistic Regression**, **SVM**, and **Random Forest**.
 
 ### Logistic Regression
 For training the model, the "**Newton-Cholesky**" solver is used, which is recommended when the number of samples is much larger than the number of features.
@@ -148,3 +148,17 @@ Also the first tree is shown as below:
 <img src="/readme_images/RF3.png">
 
 ## Clustering
+For clustering, 2 models are implemented including **Mini Batch K-Means**, and **Gaussian Mixture Model**.
+
+### Mini Batch K-Means
+The **Mini-Batch K-means** algorithm is utilized as a solution to the increasing computation time of the traditional **K-means** algorithm when analyzing **large datasets**.
+
+The clustering results for different number of clusters are shown as below:
+
+| Number of Clusters | Deep Features | Handcrafted Features |
+| --- | --- | --- |
+| 2 | <img src="/readme_images/Clustering1.png"> | <img src="/readme_images/c1.png"> |
+| 3 | <img src="/readme_images/Clustering2.jpg"> | <img src="/readme_images/C2.png"> |
+| 6 | <img src="/readme_images/Clustering3.png"> | <img src="/readme_images/C3.png"> |
+| 9 | <img src="/readme_images/Clustering4.png"> | <img src="/readme_images/C4.png"> |
+| 50 | <img src="/readme_images/Clustering5.png"> | <img src="/readme_images/C5.png"> |
