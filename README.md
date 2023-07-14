@@ -76,3 +76,22 @@ Lables Summary:
     <img src="/readme_images/preprocessing2.jpg">
     <img src="/readme_images/preprocessing3.png">
 </div>
+
+### Dimension Reduction
+In this project the **PCA** and **LOL** techniques are used to reduce dimension.
+
+**Linear Optimal Low-Rank Projection (LOL)**:
+The key intuition behind LOL is that we can jointly use the means and variances from
+each class (like LDA and CCA), but without requiring more dimensions than samples
+(like PCA), or restrictive sparsity assumptions. Using random matrix theory, we are
+able to prove that when the data are sampled from a Gaussian, LOL finds a better
+low-dimensional representation than PCA, LDA, CCA, and other linear methods
+
+**Principal Component Analysis (PCA)**:
+**PCA** is a widely used technique for dimension reduction. It identifies a new set of variables, called principal components, that are linear combinations of the original features.
+These components are ordered in terms of the amount of variance they explain in the
+data. 
+
+PCA result for reducing **deep features** into 3 dimensions are shown below:
+
+<img src="/readme_images/pca.jpg">
