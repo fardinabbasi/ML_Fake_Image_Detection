@@ -68,7 +68,7 @@ In this project, the dataset has been preprocessed as below:
 
 3. **Standardization**: In Standardization, we transform our values such that the mean of the values is 0 and the standard deviation is 1.
 
-4. **Test & Train Split**: Train data is used for training the model, validation data is used for tuning hyperparameters and choosing the best model, and test data is used for evaluating the chosen model.
+4. **Test & Train Split**: Train data is used for training the model, and test data is used for evaluating the model.
 
 Lables Summary:
 <div style="display: flex;">
