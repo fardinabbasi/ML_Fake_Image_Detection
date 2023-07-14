@@ -15,10 +15,10 @@ A few sample images are provided below:
 Furthermore, in addition to the required feature extraction process, the deep features are already available as "[features.csv](https://github.com/fardinabbasi/ML_Fake_Image_Detection/blob/main/features.csv)" along with their corresponding labels in "[labels.csv](https://github.com/fardinabbasi/ML_Fake_Image_Detection/blob/main/labels.csv)".
 
 ## Data Preparation
-In this project, besides the given deep features, handcrafted features were needed to be extracted. The approach involved using two common techniques, namely Local Binary Patterns
-(LBP) and Fast Fourier Transform (FFT).
+### Feature Extraction
+In this project, in addition to the provided **deep features**, **handcrafted features** were also extracted. The approach involved utilizing two commonly employed techniques: **Local Binary Patterns (LBP)** and **Fast Fourier Transform (FFT)**.
 
-LBP is a texture descriptor technique that characterizes the local structure of an image
+**LBP** is a texture descriptor technique that characterizes the local structure of an image
 by comparing the intensity of a central pixel with its surrounding neighbors. By applying LBP, the project aimed to capture relevant textural details that could contribute
 to the understanding and classification of the images or data.The LBP is implemented as below:
 ```ruby
@@ -35,7 +35,7 @@ to the understanding and classification of the images or data.The LBP is impleme
       print(image_path)
       print("Something happened in LBP")
 ```
-FFT transforms a signal from the time domain to the frequency domain, enabling
+**FFT** transforms a signal from the time domain to the frequency domain, enabling
 the identification of different frequency components within the signal. By using FFT,
 we extracted frequency-based features that could provide insights into the underlying
 patterns or characteristics of the data.
@@ -57,3 +57,15 @@ patterns or characteristics of the data.
       print(image_path)
       print("Something happened in FFT")
 ```
+### Preprocessing
+In this project, the dataset has been preprocessed as below:
+
+1. **Handling Null Values**: In any real-world dataset, there are always a few null values.
+
+2. **Data Cleansing**: Data cleansing is the process of identifying and correcting corrupt or inaccurate records in a dataset. It involves detecting incomplete, incorrect, inaccurate, or irrelevant parts of the data and then taking actions such as replacing, modifying, or deleting the problematic data. For instance:
+    - There are a few incorrect labels, such as "forest" or "Jungle" instead of "jungle," "DALL.E," and other derivatives instead of "DALL-E."
+    - Removing irrelevant parts of labels, including image formats and student IDs.
+
+3. **Standardization**: In Standardization, we transform our values such that the mean of the values is 0 and the standard deviation is 1.
+
+4. **Test & Train Split**: Train data is used for training the model, validation data is used for tuning hyperparameters and choosing the best model, and test data is used for evaluating the chosen model.
