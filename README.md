@@ -95,3 +95,36 @@ data.
 PCA result for reducing **deep features** into 3 dimensions are shown below:
 
 <img src="/readme_images/pca.jpg">
+
+## Classification
+For classification, 3 classification models are implemented. **Logistic Regression**, **SVM**, and **Random Forest**.
+
+### Logistic Regression
+For training the model, the "**Newton-Cholesky**" solver is used, which is recommended when the number of samples is much larger than the number of features.
+The classification report and the confusion matrix are shown below, demonstrating the performance of the model:
+
+| Result | Deep Features | Handcrafted Features |
+| --- | --- | --- |
+| classification Report | <img src="/readme_images/LR1.jpg"> | <img src="/readme_images/LR3.png"> |
+| Confusion Matrix | <img src="/readme_images/LR2.png"> | <img src="/readme_images/LR4.png"> |
+
+### SVM
+$$
+\min_{w, b, \xi} \frac{1}{2}\|w\|^2 + C\sum_{i=1}^{n}\xi_i
+$$
+
+subject to:
+
+$$
+\begin{align*}
+& y_i(w^T x_i + b) \geq 1 - \xi_i, \quad i = 1, 2, \ldots, n \\
+& \xi_i \geq 0, \quad i = 1, 2, \ldots, n
+\end{align*}
+$$
+
+C is a **hyperparameter** which determines the **trade-off** between lower error or higher margin. In order to choose this hyperparameter, we used **grid search** technique and the best C for deep feature equals to 0.1 and for handcrafted features equals to 1.
+
+| Result | Deep Features | Handcrafted Features |
+| --- | --- | --- |
+| classification Report | <img src="/readme_images/svm1.jpg"> | <img src="/readme_images/SVM3.jpg"> |
+| Confusion Matrix | <img src="/readme_images/svm2.jpg"> | <img src="/readme_images/SVM4.jpg"> |
