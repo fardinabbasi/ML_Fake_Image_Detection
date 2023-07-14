@@ -174,4 +174,8 @@ can represent various data patterns and capture the underlying structure of the 
 
 The **Expectation-Maximization (EM)** algorithm is commonly employed to estimate the parameters of Gaussian Mixture Models (GMMs), including the mean, covariance, and cluster weights.
 
-To find the optimal number of components in a cluster, the **Akaike Information Criterion (AIC)** and **Bayesian Information Criterion (BIC)** are commonly used measures.
+To find the optimal number of components in a cluster, the **Akaike Information Criterion (AIC)** and **Bayesian Information Criterion (BIC)** are commonly used measures.
+
+| Deep Features | Handcrafted Features |
+| --- | --- |
+| <img src="/readme_images/m1.png"> | <img src="/readme_images/m2.png"> |
