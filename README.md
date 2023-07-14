@@ -105,10 +105,12 @@ The classification report and the confusion matrix are shown below, demonstratin
 
 | Result | Deep Features | Handcrafted Features |
 | --- | --- | --- |
-| classification Report | <img src="/readme_images/LR1.jpg"> | <img src="/readme_images/LR3.png"> |
+| Classification Report | <img src="/readme_images/LR1.jpg"> | <img src="/readme_images/LR3.png"> |
 | Confusion Matrix | <img src="/readme_images/LR2.png"> | <img src="/readme_images/LR4.png"> |
 
 ### SVM
+The optimization function for **Soft SVM** is written as follows:
+
 $$
 \min_{w, b, \xi} \frac{1}{2}\|w\|^2 + C\sum_{i=1}^{n}\xi_i
 $$
@@ -122,9 +124,20 @@ $$
 \end{align*}
 $$
 
-C is a **hyperparameter** which determines the **trade-off** between lower error or higher margin. In order to choose this hyperparameter, we used **grid search** technique and the best C for deep feature equals to 0.1 and for handcrafted features equals to 1.
+**C** is a **hyperparameter** which determines the **trade-off** between lower error or higher margin. In order to choose this hyperparameter, we used **grid search** technique and the best C for deep feature equals to 0.1 and for handcrafted features equals to 1.
 
 | Result | Deep Features | Handcrafted Features |
 | --- | --- | --- |
-| classification Report | <img src="/readme_images/svm1.jpg"> | <img src="/readme_images/SVM3.jpg"> |
+| Classification Report | <img src="/readme_images/svm1.jpg"> | <img src="/readme_images/SVM3.jpg"> |
 | Confusion Matrix | <img src="/readme_images/svm2.jpg"> | <img src="/readme_images/SVM4.jpg"> |
+
+### Random Forest
+[Random forests](https://www.mygreatlearning.com/blog/random-forest-algorithm/) or random decision forests are an **ensemble learning** method for classification, regression, and other tasks that operates by constructing a multitude of decision trees at training time.
+
+Two importent **hyperparameters** to find in random forest method, are the **number of estimators** and the **maximum depth**. The Best Hyperparameters for **deep features** are found by **Randomized Search CV**:
+
+**Best Hyperparameters: {'n_estimators': 85, 'max_depth': 100}**
+The classification report and the confusion matrix are shown as below which demonstrate how well the model works with deep features:
+| Classification Report | Confusion Matrix |
+| --- | --- |
+| <img src="/readme_images/RF1.png"> | <img src="/readme_images/RF2.png"> |
