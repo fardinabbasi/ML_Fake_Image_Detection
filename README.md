@@ -167,3 +167,11 @@ The best number of clusters, is **elbow point** in the plot of **inertia** with 
 | Deep Features | Handcrafted Features |
 | --- | --- |
 | <img src="/readme_images/C6.png"> | <img src="/readme_images/Clustering6.png"> |
+
+### Gaussian Mixture Model
+**Gaussian Mixture Models (GMMs)** are powerful probabilistic models used for clustering and density estimation. By combining multiple Gaussian components, GMMs
+can represent various data patterns and capture the underlying structure of the data.
+
+The **Expectation-Maximization (EM)** algorithm is commonly employed to estimate the parameters of Gaussian Mixture Models (GMMs), including the mean, covariance, and cluster weights.
+
+To find the optimal number of components in a cluster, the **Akaike Information Criterion (AIC)** and **Bayesian Information Criterion (BIC)** are commonly used measures.
