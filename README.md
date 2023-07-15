@@ -60,9 +60,8 @@ patterns or characteristics of the data.
 ### Preprocessing
 In this project, the dataset has been preprocessed as below:
 
-1. **Handling Null Values**: In any real-world dataset, there are always a few null values.
-
-2. **Data Cleansing**: Data cleansing is the process of identifying and correcting corrupt or inaccurate records in a dataset. It involves detecting incomplete, incorrect, inaccurate, or irrelevant parts of the data and then taking actions such as replacing, modifying, or deleting the problematic data. For instance:
+1. **Handling Null Values**: In any real-world dataset, There are usually a few null values in any real-world dataset.
+2. Data cleansing is the process of identifying and correcting corrupt or inaccurate records in a dataset. It involves detecting incomplete, incorrect, inaccurate, or irrelevant parts of the data and then taking actions such as replacing, modifying, or deleting the problematic data. For instance:
     - There are a few incorrect labels, such as "forest" or "Jungle" instead of "jungle," "DALL.E," and other derivatives instead of "dalle".
     - Removing irrelevant parts of labels, including image formats and student IDs.
 
@@ -70,15 +69,21 @@ In this project, the dataset has been preprocessed as below:
 
 4. **Test & Train Split**: Train data is used for training the model, and test data is used for evaluating the model.
 
-Lables Summary:
+Labels Summary:
 <div style="display: flex;">
     <img src="/readme_images/preprocessing1.jpg">
     <img src="/readme_images/preprocessing2.jpg">
     <img src="/readme_images/preprocessing3.png">
 </div>
 
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
+>   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
+> </picture><br>
+>
+> none &equiv; real
 ### Dimension Reduction
-In this project the **PCA** and **LOL** techniques are used to reduce dimension.
+This project uses the **PCA** and **LOL** techniques to reduce dimension.
 
 **Linear Optimal Low-Rank Projection (LOL)**:
 The key intuition behind LOL is that we can jointly use the means and variances from
