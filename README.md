@@ -61,7 +61,7 @@ patterns or characteristics of the data.
 In this project, the dataset has been preprocessed as below:
 
 1. **Handling Null Values**: In any real-world dataset, There are usually a few null values in any real-world dataset.
-2. Data cleansing is the process of identifying and correcting corrupt or inaccurate records in a dataset. It involves detecting incomplete, incorrect, inaccurate, or irrelevant parts of the data and then taking actions such as replacing, modifying, or deleting the problematic data. For instance:
+2. **Data cleansing** is the process of identifying and correcting corrupt or inaccurate records in a dataset. It involves detecting incomplete, incorrect, inaccurate, or irrelevant parts of the data and then taking actions such as replacing, modifying, or deleting the problematic data. For instance:
     - There are a few incorrect labels, such as "forest" or "Jungle" instead of "jungle," "DALL.E," and other derivatives instead of "dalle".
     - Removing irrelevant parts of labels, including image formats and student IDs.
 
