@@ -137,7 +137,7 @@ $$
 | Confusion Matrix | <img src="/readme_images/svm2.jpg"> | <img src="/readme_images/SVM4.jpg"> |
 
 ### Random Forest
-[Random forests](https://www.mygreatlearning.com/blog/random-forest-algorithm/) or random decision forests are an **ensemble learning** method for classification, regression, and other tasks that operates by constructing a multitude of decision trees at training time.
+[Random forests](https://www.mygreatlearning.com/blog/random-forest-algorithm/) or random decision forests is an **ensemble learning** method for classification, regression, and other tasks that operates by constructing a multitude of decision trees at training time.
 
 Two importent **hyperparameters** to find in random forest method, are the **number of estimators** and the **maximum depth**. The Best Hyperparameters for **deep features** are found by **Randomized Search CV**:
 
