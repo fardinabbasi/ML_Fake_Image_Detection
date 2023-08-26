@@ -1,4 +1,17 @@
 # ML_Fake_Image_Detection
+# Table of Contents
+
+  - [Data Preparation](#Data-Preparation)
+    - [Feature Extraction](#Feature-Extraction)
+    - [Preprocessing](#Preprocessing)
+    - [Dimension Reduction](#Dimension-Reduction)
+  - [Classification](#Classification)
+    - [Logistic Regression](#Logistic-Regression)
+    - [SVM](#SVM)
+    - [Random Forest](#Random-Forest)
+  - [Clustering](#Clustering)
+    - [Mini Batch K-Means](#K-Means)
+    - [Gaussian Mixture Model](#GMM)
 
 **Feature extraction** of '[real](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/real)' and '[fake](https://github.com/fardinabbasi/ML_Fake_Image_Detection/tree/main/fake)' images and implementation of the best classification method (using various machine learning models such as **Random Forest**, **SVM**, and **Logistic Regression**) to identify fake images.
 
@@ -14,8 +27,8 @@ A few sample images are provided below:
 
 Furthermore, in addition to the required feature extraction process, the deep features are already available as "[features.csv](https://github.com/fardinabbasi/ML_Fake_Image_Detection/blob/main/features.csv)" along with their corresponding labels in "[labels.csv](https://github.com/fardinabbasi/ML_Fake_Image_Detection/blob/main/labels.csv)".
 
-## Data Preparation
-### Feature Extraction
+## Data Preparation <a name="Data-Preparation"></a>
+### Feature Extraction <a name="Feature-Extraction"></a>
 In this project, in addition to the provided **deep features**, **handcrafted features** were also extracted. The approach involved utilizing two commonly employed techniques: **Local Binary Patterns (LBP)** and **Fast Fourier Transform (FFT)**.
 
 **LBP** is a texture descriptor technique that characterizes the local structure of an image
@@ -57,7 +70,7 @@ patterns or characteristics of the data.
       print(image_path)
       print("Something happened in FFT")
 ```
-### Preprocessing
+### Preprocessing <a name="Preprocessing"></a>
 In this project, the dataset has been preprocessed as below:
 
 1. **Handling Null Values**: In any real-world dataset, There are usually a few null values.
@@ -82,7 +95,7 @@ Labels Summary:
 > </picture><br>
 >
 > none &equiv; real
-### Dimension Reduction
+### Dimension Reduction <a name="Dimension-Reduction"></a>
 This project uses the **PCA** and **LOL** techniques to reduce dimension.
 
 **Linear Optimal Low-Rank Projection (LOL)**:
@@ -97,14 +110,14 @@ PCA is a widely used technique for dimension reduction. It identifies a new set 
 These components are ordered in terms of the amount of variance they explain in the
 data. 
 
-PCA result for reducing **deep features** into 3 dimensions are shown below:
+PCA results for reducing **deep features** into 3 dimensions are shown below:
 
 <img src="/readme_images/pca.jpg">
 
-## Classification
+## Classification <a name="Classification"></a>
 For classification, 3 classification models are implemented including **Logistic Regression**, **SVM**, and **Random Forest**.
 
-### Logistic Regression
+### Logistic Regression <a name="Logistic-Regression"></a>
 For training the model, the "**Newton-Cholesky**" solver is used, which is recommended when the number of samples is much larger than the number of features.
 The classification report and the confusion matrix are shown below, demonstrating the performance of the model:
 
@@ -113,7 +126,7 @@ The classification report and the confusion matrix are shown below, demonstratin
 | Classification Report | <img src="/readme_images/LR1.jpg"> | <img src="/readme_images/LR3.png"> |
 | Confusion Matrix | <img src="/readme_images/LR2.png"> | <img src="/readme_images/LR4.png"> |
 
-### SVM
+### SVM <a name="SVM"></a>
 The optimization function for **Soft SVM** is written as follows:
 
 $$
@@ -129,17 +142,17 @@ $$
 \end{align*}
 $$
 
-**C** is a **hyperparameter** which determines the **trade-off** between lower error or higher margin. In order to choose this hyperparameter, we used **grid search** technique and the best C for deep feature equals to 0.1 and for handcrafted features equals to 1.
+**C** is a **hyperparameter** which determines the **trade-off** between lower error or higher margin. In order to choose this hyperparameter, we used the **grid search** technique and the best C for deep feature equals 0.1 and for handcrafted features equals 1.
 
 | Result | Deep Features | Handcrafted Features |
 | --- | --- | --- |
 | Classification Report | <img src="/readme_images/svm1.jpg"> | <img src="/readme_images/SVM3.jpg"> |
 | Confusion Matrix | <img src="/readme_images/svm2.jpg"> | <img src="/readme_images/SVM4.jpg"> |
 
-### Random Forest
+### Random Forest <a name="Random-Forest"></a>
 [Random forests](https://www.mygreatlearning.com/blog/random-forest-algorithm/) or random decision forests is an **ensemble learning** method for classification, regression, and other tasks that operates by constructing a multitude of decision trees at training time.
 
-Two importent **hyperparameters** to find in random forest method, are the **number of estimators** and the **maximum depth**. The Best Hyperparameters for **deep features** are found by **Randomized Search CV**:
+Two important **hyperparameters** to find in the random forest method, are the **number of estimators** and the **maximum depth**. The Best Hyperparameters for **deep features** are found by **Randomized Search CV**:
 
 *Best Hyperparameters: {'n_estimators': 85, 'max_depth': 100}*
 
@@ -148,17 +161,17 @@ The classification report and the confusion matrix are shown as below which demo
 | --- | --- |
 | <img src="/readme_images/RF1.png"> | <img src="/readme_images/RF2.png"> |
 
-Also the first tree is shown as below:
+Also, the first tree is shown below:
 
 <img src="/readme_images/RF3.png">
 
-## Clustering
+## Clustering <a name="Clustering"></a>
 For clustering, 2 models are implemented including **Mini Batch K-Means**, and **Gaussian Mixture Model**.
 
-### Mini Batch K-Means
+### Mini Batch K-Means <a name="K-Means"></a>
 The **Mini-Batch K-means** algorithm is utilized as a solution to the increasing computation time of the traditional **K-means** algorithm when analyzing **large datasets**.
 
-The clustering results for different number of clusters are shown as below:
+The clustering results for different numbers of clusters are shown below:
 
 | Number of Clusters | Deep Features | Handcrafted Features |
 | --- | --- | --- |
@@ -168,12 +181,12 @@ The clustering results for different number of clusters are shown as below:
 | 9 | <img src="/readme_images/Clustering4.png"> | <img src="/readme_images/C4.png"> |
 | 50 | <img src="/readme_images/Clustering5.png"> | <img src="/readme_images/C5.png"> |
 
-The best number of clusters, is **elbow point** in the plot of **inertia** with respect to number of clusters:
+The best number of clusters is **elbow point** in the plot of **inertia** with respect to the number of clusters:
 | Deep Features | Handcrafted Features |
 | --- | --- |
 | <img src="/readme_images/C6.png"> | <img src="/readme_images/Clustering6.png"> |
 
-### Gaussian Mixture Model
+### Gaussian Mixture Model <a name="GMM"></a>
 **Gaussian Mixture Models (GMMs)** are powerful probabilistic models used for clustering and density estimation. By combining multiple Gaussian components, GMMs
 can represent various data patterns and capture the underlying structure of the data.
 
