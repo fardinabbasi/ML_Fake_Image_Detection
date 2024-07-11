@@ -1,4 +1,4 @@
-# ML_Fake_Image_Detection
+# ML Fake Image Detection
 # Table of Contents
 
   - [Data Preparation](#Data-Preparation)
