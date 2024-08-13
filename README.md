@@ -197,3 +197,9 @@ To find the optimal number of components in a cluster, the **Akaike Information 
 | Deep Features | Handcrafted Features |
 | --- | --- |
 | <img src="/readme_images/m1.png"> | <img src="/readme_images/m2.png"> |
+
+## Course Description
+- **Course**: Machine Learning [ECE 501]
+- **Semester**: Spring 2023
+- **Institution:** [School of Electrical & Computer Engineering](https://ece.ut.ac.ir/en/), [College of Engineering](https://eng.ut.ac.ir/en), [University of Tehran](https://ut.ac.ir/en)
+- **Instructors:** Dr. A. Dehaqani, Dr. Tavassolipour
